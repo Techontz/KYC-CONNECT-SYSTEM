@@ -3,7 +3,7 @@
 import { BadgeCheck, Bike, ChevronRight, MapPin, Users } from "lucide-react";
 import { useLang } from "./LangProvider";
 
-/** A stylised BodaConnect OS rider screen, rendered in pure HTML/CSS. */
+/** A stylised BodaKonnect rider screen, rendered in pure HTML/CSS. */
 export function PhoneMockup({ className = "" }: { className?: string }) {
   const { t } = useLang();
   const p = t.how.phone;
@@ -23,7 +23,7 @@ export function PhoneMockup({ className = "" }: { className?: string }) {
         </div>
 
         <div className="bg-forest px-5 pb-12 pt-6 text-white">
-          <p className="text-[12px] text-mint-200">BodaConnect OS</p>
+          <p className="text-[12px] text-mint-200">BodaKonnect</p>
           <p className="mt-1 text-[20px] font-bold tracking-tight">{p.greeting} 👋</p>
           <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-brand px-3 py-1 text-[11px] font-bold">
             <BadgeCheck className="size-3.5" /> {p.status}

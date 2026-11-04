@@ -138,8 +138,8 @@ export function Hero() {
                   <div className="rise mt-10 inline-flex items-center gap-4 rounded-xl bg-white p-3 pr-5 text-ink shadow-chip" style={{ "--d": "610ms" } as React.CSSProperties}>
                     <span className="grid size-14 shrink-0 place-items-center rounded-lg bg-forest text-center text-white">
                       <span>
-                        <span className="block text-[17px] font-bold leading-none">1K</span>
-                        <span className="block text-[9px] font-semibold uppercase tracking-wider text-mint-200">Pilot</span>
+                        <span className="block text-[17px] font-bold leading-none">2K</span>
+                        <span className="block text-[9px] font-semibold uppercase tracking-wider text-mint-200">{lang === "sw" ? "Awamu 1" : "Phase 1"}</span>
                       </span>
                     </span>
                     <span className="max-w-[230px]">

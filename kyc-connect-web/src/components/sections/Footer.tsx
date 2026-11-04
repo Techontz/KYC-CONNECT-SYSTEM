@@ -1,9 +1,9 @@
 "use client";
 
-import { ArrowUpRight, Mail, MapPin, ShieldCheck } from "lucide-react";
+import { ArrowUpRight, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { getBands } from "@/lib/bands";
 import { useLang } from "../LangProvider";
-import { CONTACT_EMAIL, Logo, SYSTEM_URL } from "../ui";
+import { COMPANY, CONTACT_EMAIL, Logo, SYSTEM_URL } from "../ui";
 
 /** Footer as a dark rounded card sitting inside the white page. */
 export function Footer() {
@@ -22,7 +22,9 @@ export function Footer() {
             <p className="mt-8 text-[17px] leading-relaxed text-white/90">
               {f.copyright.replace("{year}", String(year))}
               <br />
-              {f.powered} <span className="text-brand">WADONGE GROUP LIMITED.</span>
+              {f.powered} <span className="text-brand">{COMPANY.brela}</span>
+              <br />
+              {f.dates}
               <br />
               {f.rights}
             </p>
@@ -68,9 +70,15 @@ export function Footer() {
                   {CONTACT_EMAIL}
                 </a>
               </li>
-              <li className="inline-flex items-center gap-2">
-                <MapPin className="size-4" aria-hidden="true" />
-                Dodoma, Tanzania
+              <li>
+                <a href={`tel:${COMPANY.phone.replace(/\s/g, "")}`} className="inline-flex items-center gap-2 hover:text-brand">
+                  <Phone className="size-4" aria-hidden="true" />
+                  {COMPANY.phone}
+                </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="mt-1 size-4 shrink-0" aria-hidden="true" />
+                {COMPANY.office}
               </li>
             </ul>
             <a href={SYSTEM_URL} className="mt-9 inline-flex h-12 items-center gap-2 rounded-full bg-brand px-6 text-[16px] font-bold text-white transition hover:bg-brand-600">
@@ -98,7 +106,7 @@ export function Footer() {
               </a>
             </li>
           </ul>
-          <a href={SYSTEM_URL} className="inline-flex items-center gap-2 text-[15px] text-white/75 hover:text-white">
+          <a href={COMPANY.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[15px] text-white/75 hover:text-white">
             <span aria-hidden="true">🇹🇿</span>
             {f.madeIn}
             <ArrowUpRight className="size-4" aria-hidden="true" />

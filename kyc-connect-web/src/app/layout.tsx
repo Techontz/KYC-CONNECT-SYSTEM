@@ -8,10 +8,11 @@ import { LangProvider } from "@/components/LangProvider";
 const arimo = Arimo({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-arimo", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "KYC Connect | BodaConnect OS | Every rider. One trusted record.",
+  title: "KYC CONNECT LTD | BodaKonnect | Identity. Trust. Connection.",
   description:
-    "KYC Connect is the overview of BodaConnect OS: secure digital records for bodaboda and bajaji riders, vehicles and associations. UMAPIDO Dodoma pilot by Wadonge Group Limited.",
+    "KYC CONNECT LTD builds digital identity, data and compliance technology in Tanzania. BodaKonnect, its flagship platform, connects bodaboda and bajaji riders, associations and institutions, starting with the Dodoma pilot.",
   icons: { icon: "/icon.svg" },
+  openGraph: { images: ["/brand/kycconnect-logo.png"] },
 };
 
 export const viewport: Viewport = {

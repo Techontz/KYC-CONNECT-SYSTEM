@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Building2, Globe2, MapPin, Users } from "lucide-react";
-import { wards } from "@/lib/content";
+import { Building2, Handshake, Info } from "lucide-react";
 import { getBands } from "@/lib/bands";
 import { useLang } from "../LangProvider";
-import { LogoMark, Reveal } from "../ui";
+import { Reveal } from "../ui";
 
 type Tile = { kind: "org" | "ward" | "more"; name: string; sub: string };
 const PER_PAGE = 8;
@@ -15,12 +14,11 @@ export function PilotPartners() {
   const { lang } = useLang();
   const p = getBands(lang).pilot;
 
-  const tiles: Tile[] = [
-    { kind: "org", name: "Wadonge Group", sub: p.orgRoles[0] },
-    { kind: "org", name: "UMAPIDO", sub: p.orgRoles[1] },
-    ...wards.map((w) => ({ kind: "ward" as const, name: w, sub: p.wardLabel })),
-    ...p.more.map(([name, sub]) => ({ kind: "more" as const, name, sub })),
-  ];
+  const tiles: Tile[] = p.collaborators.map(([name, sub], i) => ({
+    kind: i === 0 ? "org" : i === p.collaborators.length - 1 ? "more" : "ward",
+    name,
+    sub,
+  }));
   const pages = Math.ceil(tiles.length / PER_PAGE);
   const [page, setPage] = useState(0);
   const [hover, setHover] = useState(false);
@@ -34,20 +32,15 @@ export function PilotPartners() {
   const Tile = ({ t }: { t: Tile }) => (
     <li className="flex h-[150px] min-w-0 flex-col items-center justify-center gap-2 bg-white px-2 py-3 text-center md:h-[180px]">
       {t.kind === "org" ? (
-        t.name === "UMAPIDO" ? (
-          <span className="grid size-12 place-items-center rounded-full bg-forest-900 text-white">
-            <Users className="size-6" aria-hidden="true" />
-          </span>
-        ) : (
-          <LogoMark size={44} />
-        )
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src="/brand/kycconnect-logo.png" alt="" className="h-9 w-auto" />
       ) : t.kind === "ward" ? (
         <span className="grid size-11 place-items-center rounded-full bg-mint text-brand-700">
-          <MapPin className="size-5" aria-hidden="true" />
+          {t.name === "UMAPIDO" ? <Handshake className="size-5" aria-hidden="true" /> : <Building2 className="size-5" aria-hidden="true" />}
         </span>
       ) : (
         <span className="grid size-11 place-items-center rounded-full border-[1.5px] border-dashed border-forest-900/30 text-forest-900/60">
-          {t.name.startsWith("Mikoa") || t.name.startsWith("More regions") ? <Globe2 className="size-5" /> : <Building2 className="size-5" />}
+          <Handshake className="size-5" aria-hidden="true" />
         </span>
       )}
       <span className={`w-full font-bold uppercase leading-tight tracking-tight text-forest-900 ${t.kind === "org" ? "text-[14px] md:text-[15px]" : "text-[12px] md:text-[13px]"}`}>{t.name}</span>
@@ -66,7 +59,7 @@ export function PilotPartners() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {p.stats.map((s) => (
               <div key={s.title} className="bg-white px-6 py-7 text-center">
-                <p className="text-[32px] text-[#2b2b2b]">{s.value}+</p>
+                <p className="text-[32px] text-[#2b2b2b]">{s.value}</p>
                 <p className="mt-1 text-[19px] text-brand-700">{s.title}</p>
                 <p className="mt-2 text-[16px] leading-snug text-[#2b2b2b]">{s.body}</p>
               </div>
@@ -96,7 +89,11 @@ export function PilotPartners() {
                 ))}
               </div>
             </div>
-            <div className="mt-7 flex justify-center gap-2.5">
+            <p className="mt-5 flex items-start gap-2 text-[13px] leading-snug text-muted">
+              <Info className="mt-0.5 size-4 shrink-0" aria-hidden="true" />
+              {p.note}
+            </p>
+            <div className="mt-5 flex justify-center gap-2.5">
               {Array.from({ length: pages }).map((_, i) => (
                 <button
                   key={i}

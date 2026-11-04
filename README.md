@@ -6,7 +6,7 @@ Product of Wadonge Group Limited.
 | Folder | What it is | Stack | Local URL |
 |---|---|---|---|
 | `kyc-connect-web/` | KYC Connect public overview / landing site | Next.js 15, Tailwind v4 | http://localhost:3000 |
-| `bodaconnect_system/frontend/` | BodaConnect OS web app (PWA) | Next.js 15, TypeScript | http://localhost:3011 |
+| `bodaconnect_system/frontend/` | BodaKonnect (BodaConnect OS) web app (PWA) | Next.js 15, TypeScript | http://localhost:3011 |
 | `bodaconnect_system/backend/` | BodaConnect OS API | Laravel 13, MySQL 8 | http://127.0.0.1:8010/api/v1 |
 | `bodaconnect_system/docs/` | Shared API contract | | |
 

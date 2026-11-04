@@ -86,7 +86,7 @@ export function Header() {
               ))}
               <li>
                 <a href={SYSTEM_URL} className={`${linkCls} underline decoration-[1.5px] underline-offset-[6px]`}>
-                  BodaConnect OS
+                  BodaKonnect
                 </a>
               </li>
             </ul>

@@ -1,18 +1,18 @@
-# KYC Connect: BodaConnect OS overview site
+# KYC Connect: BodaKonnect overview site
 
-Public landing page that introduces **BodaConnect OS** (UMAPIDO Dodoma pilot, Wadonge Group Limited)
+Public landing page of **KYC CONNECT LTD** (BRELA 211723971) introducing **BodaKonnect**, its flagship platform (UMAPIDO Dodoma pilot)
 before users go into the full system.
 
 * Next.js 15 (App Router) + TypeScript + Tailwind CSS v4, static output.
 * Swahili-first with an English toggle (`src/lib/content.ts`; the choice is remembered in localStorage).
 * Visual language: big bold sans headings, brand green `#39B54A`, mint `#D6EDE3` cards, deep forest `#1F3E35`,
   pill eyebrows, floating UI "chips", numbered how-it-works band, dark impact section and a forest footer.
-  These tokens are shared with the BodaConnect OS frontend.
+  These tokens are shared with the BodaKonnect OS frontend.
 
 ## Run
 
 ```bash
-cp .env.example .env.local   # set NEXT_PUBLIC_SYSTEM_URL to the BodaConnect OS frontend
+cp .env.example .env.local   # set NEXT_PUBLIC_SYSTEM_URL to the BodaKonnect OS frontend
 npm install
 npm run dev                  # http://localhost:3000
 npm run build && npm start   # production
@@ -20,7 +20,7 @@ npm run build && npm start   # production
 
 | Env var | Purpose |
 |---|---|
-| `NEXT_PUBLIC_SYSTEM_URL` | Where every "Open BodaConnect OS" button points (default `http://localhost:3011`) |
+| `NEXT_PUBLIC_SYSTEM_URL` | Where every "Open BodaKonnect OS" button points (default `http://localhost:3011`) |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | "Talk to the pilot team" mailto address (**placeholder, replace it**) |
 
 ## Structure
@@ -64,6 +64,13 @@ In code: `Logo` and `LogoMark` in `src/components/ui.tsx`.
 ## Hero visual
 
 `src/components/HeroHand.tsx` shows `public/images/hero-hand.png`: the client-supplied image of a hand holding a
-phone running BodaConnect OS, with its background removed (Apple Vision) so it sits on the green slide.
+phone running BodaKonnect OS, with its background removed (Apple Vision) so it sits on the green slide.
 To replace it, cut out a new image (on a Mac: Preview > Tools > Remove Background) and save it over that file,
 then update the `aspectRatio` in `HeroHand.tsx` to the new image's width / height.
+
+## Company data
+
+Company facts (BRELA number, dates, office, phone, email, pilot figures, collaborators) come from the
+KYC CONNECT LTD corporate profile, November 2026. Figures are shown as targets, and collaborators are shown
+with the profile's own disclaimer (working relationships, not signed agreements). The logo
+(`public/brand/kycconnect-logo.png`) was extracted from the profile.

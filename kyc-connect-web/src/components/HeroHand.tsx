@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useLang } from "./LangProvider";
 
 /**
- * Hero visual: hand holding a phone showing BodaConnect OS (image supplied by the client,
+ * Hero visual: hand holding a phone showing BodaKonnect (image supplied by the client,
  * background removed with Apple Vision). File: public/images/hero-hand.png (1237 x 1120).
  */
 export function HeroHand({ className = "" }: { className?: string }) {
@@ -13,7 +13,7 @@ export function HeroHand({ className = "" }: { className?: string }) {
     <div className={className || "relative"} style={{ aspectRatio: "1237 / 1120" }}>
       <Image
         src="/images/hero-hand.png"
-        alt={lang === "sw" ? "Mkono ukishika simu yenye BodaConnect OS" : "A hand holding a phone running BodaConnect OS"}
+        alt={lang === "sw" ? "Mkono ukishika simu yenye BodaKonnect" : "A hand holding a phone running BodaKonnect"}
         fill
         priority
         quality={90}

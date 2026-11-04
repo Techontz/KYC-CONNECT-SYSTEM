@@ -37,9 +37,9 @@ export const heroUi: Record<
   { badgeLeft: [string, string]; badgeMid: string; badgeRight: [string, string]; prev: string; next: string; pause: string; play: string; credit: string }
 > = {
   en: {
-    badgeLeft: ["UMAPIDO", "Wadonge Group"],
-    badgeMid: "Dodoma's first digital rider registry",
-    badgeRight: ["1,000", "riders"],
+    badgeLeft: ["UMAPIDO", "KYC CONNECT LTD"],
+    badgeMid: "Dodoma bodaboda & bajaji pilot since March 2026",
+    badgeRight: ["20,000", "training target"],
     prev: "Previous slide",
     next: "Next slide",
     pause: "Pause slideshow",
@@ -47,9 +47,9 @@ export const heroUi: Record<
     credit: "Photos: Pexels",
   },
   sw: {
-    badgeLeft: ["UMAPIDO", "Wadonge Group"],
-    badgeMid: "Daftari la kwanza la kidijitali la madereva Dodoma",
-    badgeRight: ["1,000", "madereva"],
+    badgeLeft: ["UMAPIDO", "KYC CONNECT LTD"],
+    badgeMid: "Majaribio ya bodaboda na bajaji Dodoma tangu Machi 2026",
+    badgeRight: ["20,000", "lengo la mafunzo"],
     prev: "Picha iliyopita",
     next: "Picha inayofuata",
     pause: "Simamisha",

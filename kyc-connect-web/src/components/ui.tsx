@@ -4,34 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, type LucideIcon } from "lucide-react";
 
 export const SYSTEM_URL = process.env.NEXT_PUBLIC_SYSTEM_URL ?? "http://localhost:3011";
-export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "pilot@bodaconnect.co.tz";
+export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@kycconnect.co.tz";
 
-/** KYC Connect brand mark: an open "C" (connect) with a check (verified) sweeping out of it. */
-export function LogoMark({ size = 38 }: { size?: number }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" className="shrink-0">
-      <defs>
-        <linearGradient id="kc-mark" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-          <stop offset="0" stopColor="#4cc95e" />
-          <stop offset="1" stopColor="#2a9139" />
-        </linearGradient>
-      </defs>
-      <rect width="64" height="64" rx="18" fill="url(#kc-mark)" />
-      <path d="M41.6 21.9A15.5 15.5 0 1 0 41.6 42.1" fill="none" stroke="#fff" strokeWidth="5.5" strokeLinecap="round" />
-      <path d="M22.5 32.5l7 7L48 18" fill="none" stroke="#fff" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
+/** Official KYCKonnect logo (from the company profile). On dark backgrounds it sits on a white plate. */
+export function Logo({ light = false, size = 40 }: { light?: boolean; size?: number }) {
+  const img = (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src="/brand/kycconnect-logo.png" alt="KYC Connect: Identity. Trust. Connection." width={Math.round(size * 3.24)} height={size} style={{ height: size, width: "auto" }} className="block select-none" draggable={false} />
   );
-}
-
-export function Logo({ light = false }: { light?: boolean }) {
-  return (
-    <span className="inline-flex items-center gap-2" aria-label="KYC Connect">
-      <LogoMark size={32} />
-      <span className={`text-[22px] leading-none tracking-[-0.02em] ${light ? "text-white" : "text-black"}`}>
-        <span className="font-bold">KYC</span> <span className="font-medium">Connect</span>
-      </span>
-    </span>
-  );
+  return light ? <span className="inline-flex rounded-[10px] bg-white px-3 py-2">{img}</span> : <span className="inline-flex">{img}</span>;
 }
 
 export function Reveal({
@@ -194,3 +175,11 @@ export function Chip({
   );
 }
 
+
+export const COMPANY = {
+  name: "KYC CONNECT LTD",
+  brela: "211723971",
+  phone: "+255 753 452 222",
+  office: "Tz Wedding Plaza, Bwawani Street, Kinondoni, Dar es Salaam",
+  website: "https://www.kycconnect.co.tz",
+};

@@ -9,17 +9,17 @@ const content = {
       trust: "Trust",
       roadmap: "Roadmap",
       faq: "FAQ",
-      open: "Open BodaConnect OS",
+      open: "Open BodaKonnect",
     },
     hero: {
       eyebrow: "UMAPIDO Dodoma pilot",
       title: "Every rider. One trusted record.",
       subtitle:
-        "KYC Connect brings bodaboda and bajaji riders, their vehicles and their associations onto one secure digital platform: BodaConnect OS.",
-      primary: "Open BodaConnect OS",
+        "KYC Connect brings bodaboda and bajaji riders, their vehicles and their associations onto one secure digital platform: BodaKonnect.",
+      primary: "Open BodaKonnect",
       secondary: "See how it works",
       trustTitle: "Pilot target",
-      trustBody: "1,000 riders across UMAPIDO groups and parking points in Dodoma",
+      trustBody: "2,000 riders in phase one, towards a 20,000-rider training target in Dodoma",
     },
     chips: {
       verified: "Membership confirmed",
@@ -30,7 +30,7 @@ const content = {
       vehicleSub: "MC 482 DFT · Bajaji",
     },
     features: {
-      eyebrow: "What BodaConnect OS does",
+      eyebrow: "What BodaKonnect does",
       title: "Do more. Ride with confidence.",
       subtitle:
         "One platform that turns paper registers and scattered WhatsApp lists into reliable, searchable and protected records.",
@@ -64,7 +64,7 @@ const content = {
       note: "Registration alone is never presented as official government identity or vehicle verification.",
     },
     how: {
-      title: "How BodaConnect works",
+      title: "How BodaKonnect works",
       subtitle: "From the parking point to a trusted digital profile in four clear steps.",
       steps: [
         { title: "Register", body: "A field agent helps the rider create a profile and explains the privacy notice in Swahili." },
@@ -121,10 +121,10 @@ const content = {
     trust: {
       title: "Trust & privacy by design",
       subtitle:
-        "Rider data belongs to riders. BodaConnect OS is built around Tanzania's Personal Data Protection Act principles: minimum data, clear purpose and full accountability.",
+        "Rider data belongs to riders. BodaKonnect is built around Tanzania's Personal Data Protection Act principles: minimum data, clear purpose and full accountability.",
       cta: "Read our privacy approach",
       stats: [
-        { value: "1,000", label: "riders in the Dodoma pilot" },
+        { value: "20,000", label: "rider training target in Dodoma" },
         { value: "7", label: "verification statuses, every one audited" },
         { value: "100%", label: "of exports permission-gated and logged" },
         { value: "0", label: "rider records sold, ever" },
@@ -156,13 +156,13 @@ const content = {
     mission: {
       quote:
         "“A boda rider should be able to prove who they are, what they ride and where they belong, and decide who gets to see it.”",
-      by: "The BodaConnect mission",
+      by: "The BodaKonnect mission",
     },
     partners: {
       title: "Pilot partners",
       subtitle: "Designed with the people who keep Dodoma moving.",
       list: [
-        { name: "Wadonge Group Limited", role: "Product owner" },
+        { name: "KYC CONNECT LTD", role: "Company, BRELA 211723971" },
         { name: "UMAPIDO", role: "Pilot association, Dodoma" },
       ],
       future: "Future partners: licensed insurers · lenders · payment providers · garages",
@@ -171,12 +171,12 @@ const content = {
       title: "Questions riders ask",
       items: [
         {
-          q: "Is BodaConnect a government registration?",
-          a: "No. BodaConnect OS is an association and rider registry. It does not replace LATRA, TRA, NIDA or police records, and a BodaConnect status is never presented as official government verification.",
+          q: "Is BodaKonnect a government registration?",
+          a: "No. BodaKonnect is an association and rider registry. It does not replace LATRA, TRA, NIDA or police records, and a BodaKonnect status is never presented as official government verification.",
         },
         {
           q: "Do I need a smartphone or an app?",
-          a: "No app store needed. BodaConnect OS runs in the browser on common Android phones and can be installed to the home screen. Riders without a phone register with help from a field agent or group leader.",
+          a: "No app store needed. BodaKonnect runs in the browser on common Android phones and can be installed to the home screen. Riders without a phone register with help from a field agent or group leader.",
         },
         {
           q: "Who can see my information?",
@@ -191,25 +191,25 @@ const content = {
           a: "Yes. Submit a correction request from your profile. You can follow its status, and protected fields are changed only by authorised staff.",
         },
         {
-          q: "Will BodaConnect give me a loan?",
-          a: "BodaConnect is not a bank, lender or insurer. Future services will be offered only through licensed partners, with your clear consent.",
+          q: "Will BodaKonnect give me a loan?",
+          a: "BodaKonnect is not a bank, lender or insurer. Future services will be offered only through licensed partners, with your clear consent.",
         },
       ],
     },
     cta: {
-      title: "Ready to see BodaConnect OS?",
+      title: "Ready to see BodaKonnect?",
       body: "Sign in with your phone number. Staff, leaders and riders each get their own view.",
-      primary: "Open BodaConnect OS",
+      primary: "Open BodaKonnect",
       secondary: "Talk to the pilot team",
     },
     footer: {
-      tagline: "The overview of BodaConnect OS, the digital operating system for bodaboda and bajaji riders.",
+      tagline: "The overview of BodaKonnect, the digital operating system for bodaboda and bajaji riders.",
       product: "Platform",
       productLinks: ["Rider registration", "Vehicle records", "Groups & parking points", "Verification", "Reports"],
       company: "Company",
-      companyLinks: ["About Wadonge", "UMAPIDO pilot", "Privacy approach", "Contact"],
+      companyLinks: ["About KYC CONNECT", "UMAPIDO pilot", "Privacy approach", "Contact"],
       legal:
-        "BodaConnect OS is a product of Wadonge Group Limited. BodaConnect is not a bank, lender, insurer, payment service provider or government verification authority.",
+        "BodaKonnect is the flagship platform of KYC CONNECT LTD (BRELA 211723971). KYC CONNECT LTD is not a bank, lender, insurer, payment service provider or government verification authority.",
       rights: "All rights reserved.",
       privacy: "Privacy notice",
       terms: "Terms of use",
@@ -223,17 +223,17 @@ const content = {
       trust: "Usalama",
       roadmap: "Mpango",
       faq: "Maswali",
-      open: "Fungua BodaConnect OS",
+      open: "Fungua BodaKonnect",
     },
     hero: {
       eyebrow: "Majaribio ya UMAPIDO Dodoma",
       title: "Kila dereva. Rekodi moja ya kuaminika.",
       subtitle:
-        "KYC Connect inawaleta madereva wa bodaboda na bajaji, vyombo vyao na vyama vyao kwenye mfumo mmoja salama wa kidijitali: BodaConnect OS.",
-      primary: "Fungua BodaConnect OS",
+        "KYC Connect inawaleta madereva wa bodaboda na bajaji, vyombo vyao na vyama vyao kwenye mfumo mmoja salama wa kidijitali: BodaKonnect.",
+      primary: "Fungua BodaKonnect",
       secondary: "Angalia unavyofanya kazi",
       trustTitle: "Lengo la majaribio",
-      trustBody: "Madereva 1,000 katika vikundi na vijiwe vya UMAPIDO, Dodoma",
+      trustBody: "Madereva 2,000 awamu ya kwanza, kuelekea lengo la mafunzo la madereva 20,000 Dodoma",
     },
     chips: {
       verified: "Uanachama umethibitishwa",
@@ -244,7 +244,7 @@ const content = {
       vehicleSub: "MC 482 DFT · Bajaji",
     },
     features: {
-      eyebrow: "BodaConnect OS inafanya nini",
+      eyebrow: "BodaKonnect inafanya nini",
       title: "Fanya zaidi. Endesha kwa uhakika.",
       subtitle:
         "Mfumo mmoja unaogeuza madaftari ya karatasi na orodha za WhatsApp kuwa rekodi za kuaminika, zinazotafutika na zilizolindwa.",
@@ -278,7 +278,7 @@ const content = {
       note: "Usajili pekee hauonyeshwi kamwe kama uthibitisho rasmi wa serikali wa utambulisho au chombo.",
     },
     how: {
-      title: "BodaConnect inavyofanya kazi",
+      title: "BodaKonnect inavyofanya kazi",
       subtitle: "Kutoka kijiweni hadi wasifu wa kidijitali unaoaminika kwa hatua nne wazi.",
       steps: [
         { title: "Jisajili", body: "Wakala anamsaidia dereva kuunda wasifu na kumweleza taarifa ya faragha kwa Kiswahili." },
@@ -335,10 +335,10 @@ const content = {
     trust: {
       title: "Usalama na faragha tangu mwanzo",
       subtitle:
-        "Taarifa za dereva ni mali ya dereva. BodaConnect OS imejengwa kwa misingi ya Sheria ya Ulinzi wa Taarifa Binafsi ya Tanzania: taarifa chache, madhumuni wazi na uwajibikaji kamili.",
+        "Taarifa za dereva ni mali ya dereva. BodaKonnect imejengwa kwa misingi ya Sheria ya Ulinzi wa Taarifa Binafsi ya Tanzania: taarifa chache, madhumuni wazi na uwajibikaji kamili.",
       cta: "Soma mtazamo wetu wa faragha",
       stats: [
-        { value: "1,000", label: "madereva kwenye majaribio ya Dodoma" },
+        { value: "20,000", label: "lengo la mafunzo ya madereva Dodoma" },
         { value: "7", label: "hali za uhakiki, zote zinakaguliwa" },
         { value: "100%", label: "ya ripoti zinadhibitiwa na kurekodiwa" },
         { value: "0", label: "rekodi za madereva zilizouzwa, kamwe" },
@@ -370,13 +370,13 @@ const content = {
     mission: {
       quote:
         "“Dereva wa boda anapaswa kuweza kuthibitisha yeye ni nani, anaendesha nini na anahusika wapi, na kuamua nani aone taarifa hizo.”",
-      by: "Dhamira ya BodaConnect",
+      by: "Dhamira ya BodaKonnect",
     },
     partners: {
       title: "Washirika wa majaribio",
       subtitle: "Imeundwa pamoja na wanaoifanya Dodoma isonge.",
       list: [
-        { name: "Wadonge Group Limited", role: "Mmiliki wa bidhaa" },
+        { name: "KYC CONNECT LTD", role: "Kampuni, BRELA 211723971" },
         { name: "UMAPIDO", role: "Chama cha majaribio, Dodoma" },
       ],
       future: "Washirika wa baadaye: bima wenye leseni · wakopeshaji · watoa huduma za malipo · gereji",
@@ -385,12 +385,12 @@ const content = {
       title: "Maswali ya madereva",
       items: [
         {
-          q: "Je, BodaConnect ni usajili wa serikali?",
-          a: "Hapana. BodaConnect OS ni daftari la chama na madereva. Haichukui nafasi ya rekodi za LATRA, TRA, NIDA au polisi, na hali ya BodaConnect haionyeshwi kamwe kama uthibitisho rasmi wa serikali.",
+          q: "Je, BodaKonnect ni usajili wa serikali?",
+          a: "Hapana. BodaKonnect ni daftari la chama na madereva. Haichukui nafasi ya rekodi za LATRA, TRA, NIDA au polisi, na hali ya BodaKonnect haionyeshwi kamwe kama uthibitisho rasmi wa serikali.",
         },
         {
           q: "Je, nahitaji simu janja au programu?",
-          a: "Huhitaji Play Store. BodaConnect OS inafanya kazi kwenye kivinjari cha simu za kawaida za Android na inaweza kuwekwa kwenye skrini ya mwanzo. Wasio na simu wanasajiliwa kwa msaada wa wakala au kiongozi wa kikundi.",
+          a: "Huhitaji Play Store. BodaKonnect inafanya kazi kwenye kivinjari cha simu za kawaida za Android na inaweza kuwekwa kwenye skrini ya mwanzo. Wasio na simu wanasajiliwa kwa msaada wa wakala au kiongozi wa kikundi.",
         },
         {
           q: "Nani anaweza kuona taarifa zangu?",
@@ -405,25 +405,25 @@ const content = {
           a: "Ndiyo. Tuma ombi la marekebisho kutoka kwenye wasifu wako. Unaweza kufuatilia hali yake, na sehemu zinazolindwa hubadilishwa na watumishi walioidhinishwa tu.",
         },
         {
-          q: "Je, BodaConnect itanipa mkopo?",
-          a: "BodaConnect si benki, mkopeshaji wala kampuni ya bima. Huduma za baadaye zitatolewa kupitia washirika wenye leseni tu, kwa ridhaa yako.",
+          q: "Je, BodaKonnect itanipa mkopo?",
+          a: "BodaKonnect si benki, mkopeshaji wala kampuni ya bima. Huduma za baadaye zitatolewa kupitia washirika wenye leseni tu, kwa ridhaa yako.",
         },
       ],
     },
     cta: {
-      title: "Uko tayari kuiona BodaConnect OS?",
+      title: "Uko tayari kuiona BodaKonnect?",
       body: "Ingia kwa namba yako ya simu. Watumishi, viongozi na madereva kila mmoja anapata mwonekano wake.",
-      primary: "Fungua BodaConnect OS",
+      primary: "Fungua BodaKonnect",
       secondary: "Ongea na timu ya majaribio",
     },
     footer: {
-      tagline: "Muhtasari wa BodaConnect OS, mfumo wa kidijitali kwa madereva wa bodaboda na bajaji.",
+      tagline: "Muhtasari wa BodaKonnect, mfumo wa kidijitali kwa madereva wa bodaboda na bajaji.",
       product: "Mfumo",
       productLinks: ["Usajili wa madereva", "Rekodi za vyombo", "Vikundi na vijiwe", "Uhakiki", "Ripoti"],
       company: "Kampuni",
-      companyLinks: ["Kuhusu Wadonge", "Majaribio ya UMAPIDO", "Mtazamo wa faragha", "Mawasiliano"],
+      companyLinks: ["Kuhusu KYC CONNECT", "Majaribio ya UMAPIDO", "Mtazamo wa faragha", "Mawasiliano"],
       legal:
-        "BodaConnect OS ni bidhaa ya Wadonge Group Limited. BodaConnect si benki, mkopeshaji, kampuni ya bima, mtoa huduma za malipo wala mamlaka ya uthibitisho ya serikali.",
+        "BodaKonnect ni jukwaa kinara la KYC CONNECT LTD (BRELA 211723971). KYC CONNECT LTD si benki, mkopeshaji, kampuni ya bima, mtoa huduma za malipo wala mamlaka ya uthibitisho ya serikali.",
       rights: "Haki zote zimehifadhiwa.",
       privacy: "Taarifa ya faragha",
       terms: "Masharti ya matumizi",

@@ -6,7 +6,7 @@ import { Reveal } from "../ui";
 /**
  * Logo band in the style of an "investors" strip.
  *
- * These are the banks and mobile-money services riders already use and that BodaConnect is
+ * These are the banks and mobile-money services riders already use and that BodaKonnect is
  * being built to connect to. They are NOT investors or signed partners, so the copy says so.
  * When a partnership is signed, move it to a "Partners" heading and update the note.
  * Logo files: /public/partners (official files from the companies' websites or Wikimedia Commons).
@@ -25,12 +25,12 @@ const logos = [
 const copy = {
   en: {
     title: "Built for Tanzania's financial services",
-    body: "The banks and mobile-money services riders use every day, which BodaConnect is being built to connect to.",
+    body: "The banks and mobile-money services riders use every day, which BodaKonnect is being built to connect to.",
     note: "Logos are shown to illustrate planned integrations. They do not indicate a partnership or endorsement until an agreement is signed.",
   },
   sw: {
     title: "Imejengwa kwa huduma za kifedha za Tanzania",
-    body: "Benki na huduma za pesa kwa simu ambazo madereva wanazitumia kila siku, na ambazo BodaConnect inajengwa kuunganishwa nazo.",
+    body: "Benki na huduma za pesa kwa simu ambazo madereva wanazitumia kila siku, na ambazo BodaKonnect inajengwa kuunganishwa nazo.",
     note: "Nembo zinaonyesha miunganiko inayopangwa. Hazimaanishi ushirikiano wala uidhinishaji hadi mkataba usainiwe.",
   },
 };
