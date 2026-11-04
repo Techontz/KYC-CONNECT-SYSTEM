@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", "HelveticaNeue", Helvetica, var(--font-arimo), Arial, sans-serif;
+
+  --color-brand: #39b54a;
+  --color-brand-600: #2e9a3e;
+  --color-brand-700: #237a30;
+  --color-forest: #1f3e35;
+  --color-forest-900: #14291f;
+  --color-mint: #d6ede3;
+  --color-mint-200: #a5d8c0;
+  --color-mint-50: #eef7f2;
+  --color-ink: #0b0f0d;
+  --color-muted: #5b6b63;
+  --color-line: #e3e8e5;
+  --color-surface: #f6f8f7;
+  --color-amber: #f5b700;
+
+  --shadow-card: 0 1px 2px rgba(0, 17, 102, 0.06), 0 8px 24px rgba(0, 17, 102, 0.06);
+  --shadow-chip: 0 2px 4px rgba(0, 17, 102, 0.08), 0 16px 40px rgba(0, 17, 102, 0.14);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-kenburns: kenburns 9s ease-out forwards;
+  --animate-progress: progress linear forwards;
+  --animate-slidein: slidein 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes kenburns {
+    from { transform: scale(1.12); }
+    to { transform: scale(1); }
+  }
+  @keyframes progress {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  @keyframes slidein {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.heading {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+}
+
+.container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  .container-x { padding-inline: 40px; }
+}
+
+/* Arch pattern backdrop, a nod to the reference's geometric texture */
+.pattern-arches {
+  background-color: #fcfdfc;
+  background-image:
+    radial-gradient(circle at 50% 0, transparent 38px, #f4f6f5 39px, #f4f6f5 56px, transparent 57px),
+    linear-gradient(#f4f6f5, #f4f6f5);
+  background-size: 112px 112px, 18px 112px;
+  background-position: 0 56px, 47px 0;
+  background-repeat: repeat, repeat-x;
+}
+
+/* Arch texture for the green hero slide: lighter arches on brand green */
+.pattern-arches-green {
+  background-color: #39b54a;
+  background-image:
+    radial-gradient(circle at 50% 0, transparent 46px, rgba(255, 255, 255, 0.07) 47px, rgba(255, 255, 255, 0.07) 70px, transparent 71px),
+    linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.07));
+  background-size: 140px 140px, 23px 140px;
+  background-position: 0 70px, 58px 0;
+  background-repeat: repeat, repeat-x;
+}
+
+.dot-globe {
+  background-image: radial-gradient(circle, rgba(94, 234, 180, 0.9) 1.6px, transparent 2.2px);
+  background-size: 18px 18px;
+  -webkit-mask-image: radial-gradient(circle at 70% 50%, #000 0 34%, transparent 62%);
+  mask-image: radial-gradient(circle at 70% 50%, #000 0 34%, transparent 62%);
+}
+
+/* Reveal-on-scroll (variants: up (default), left, right, zoom) */
+.reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.9s ease, transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal[data-variant="left"] { transform: translateX(-64px); }
+.reveal[data-variant="right"] { transform: translateX(64px); }
+.reveal[data-variant="zoom"] { transform: scale(0.92) translateY(24px); }
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero: content rises in, staggered, every time a slide becomes active */
+.slide .rise { opacity: 0; }
+.slide.is-active .rise { animation: rise 0.95s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms) both; }
+.slide .hand-rise { opacity: 0; }
+.slide.is-active .hand-rise { animation: hand-rise 1.3s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+@keyframes rise {
+  from { opacity: 0; transform: translateY(44px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hand-rise {
+  from { opacity: 0; transform: translateY(140px) rotate(5deg); transform-origin: bottom left; }
+  to { opacity: 1; transform: none; }
+}
+
+/* Gentle pop for notification chips */
+@keyframes pop-in {
+  0% { opacity: 0; transform: translateY(16px) scale(0.85); }
+  60% { opacity: 1; transform: translateY(-4px) scale(1.03); }
+  100% { opacity: 1; transform: none; }
+}
+.is-visible .pop-in { animation: pop-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .slide .rise, .slide .hand-rise { opacity: 1; animation: none !important; }
+  .is-visible .pop-in { animation: none; }
+  .animate-marquee, .animate-float, .animate-kenburns, .animate-slidein { animation: none !important; }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }

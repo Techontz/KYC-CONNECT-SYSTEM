@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+/* BodaConnect OS design tokens (matches the KYC Connect landing site). */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-brand: #39b54a;
+  --color-brand-hover: #2e9a3e;
+  --color-forest: #1f3e35;
+  --color-forest-900: #14291f;
+  --color-forest-700: #2a5246;
+  --color-mint: #d6ede3;
+  --color-mint-50: #eef7f2;
+  --color-ink: #0b0f0d;
+  --color-muted: #5b6b63;
+  --color-line: #e3e8e5;
+  --color-surface: #f6f8f7;
+  --color-amber: #f5b700;
+  --color-amber-50: #fff8e1;
+  --color-amber-900: #7a5b00;
+  --color-danger: #d64545;
+  --color-danger-50: #fdecec;
+  --color-danger-900: #8f2424;
+  --color-info: #2f80ed;
+  --color-info-50: #eaf2fd;
+  --color-info-900: #1a4f99;
+  --color-success-900: #1e6b2a;
+
+  --radius-card: 20px;
+  --radius-input: 12px;
+
+  --shadow-soft: 0 1px 2px rgba(0, 17, 102, 0.06), 0 8px 24px rgba(0, 17, 102, 0.06);
+  --shadow-float: 0 2px 4px rgba(0, 17, 102, 0.08), 0 16px 40px rgba(0, 17, 102, 0.12);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+/* Visible, consistent focus ring for keyboard users. */
+:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-brand) 55%, transparent);
+  outline-offset: 2px;
+}
+
+@keyframes bc-shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+.bc-skeleton {
+  background: linear-gradient(90deg, #eef1ef 0px, #f7f9f8 120px, #eef1ef 240px);
+  background-size: 800px 100%;
+  animation: bc-shimmer 1.4s linear infinite;
+}
+
+@keyframes bc-slide-up {
+  from {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bc-animate-in {
+  animation: bc-slide-up 0.22s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bc-skeleton,
+  .bc-animate-in {
+    animation: none;
+  }
+}
+
+/* Safe area padding for the mobile bottom nav. */
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}

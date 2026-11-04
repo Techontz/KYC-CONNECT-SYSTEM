@@ -1,0 +1,35 @@
+import {
+  BarChart3,
+  Bell,
+  Building2,
+  CopyCheck,
+  FileSearch,
+  House,
+  LifeBuoy,
+  Lock,
+  Motorbike,
+  ScrollText,
+  ShieldCheck,
+  UserCircle2,
+  UserPlus,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
+import type { NavKey } from "@/lib/roles";
+
+export const NAV_ICONS: Record<NavKey, LucideIcon> = {
+  home: House,
+  me: UserCircle2,
+  register: UserPlus,
+  riders: Users,
+  verification: ShieldCheck,
+  duplicates: CopyCheck,
+  vehicles: Motorbike,
+  organisation: Building2,
+  reports: BarChart3,
+  notices: Bell,
+  support: LifeBuoy,
+  privacy: Lock,
+  admin: FileSearch,
+  audit: ScrollText,
+};
