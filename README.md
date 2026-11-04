@@ -5,7 +5,7 @@ Product of Wadonge Group Limited.
 
 | Folder | What it is | Stack | Local URL |
 |---|---|---|---|
-| `kyc connect web/` | KYC Connect public overview / landing site | Next.js 15, Tailwind v4 | http://localhost:3000 |
+| `kyc-connect-web/` | KYC Connect public overview / landing site | Next.js 15, Tailwind v4 | http://localhost:3000 |
 | `bodaconnect_system/frontend/` | BodaConnect OS web app (PWA) | Next.js 15, TypeScript | http://localhost:3011 |
 | `bodaconnect_system/backend/` | BodaConnect OS API | Laravel 13, MySQL 8 | http://127.0.0.1:8010/api/v1 |
 | `bodaconnect_system/docs/` | Shared API contract | | |
@@ -23,7 +23,7 @@ php artisan serve --port=8010
 cd ../frontend && cp .env.example .env.local && npm install && npm run dev   # :3011
 
 # 3. Landing site
-cd "../../kyc connect web" && cp .env.example .env.local && npm install && npm run dev   # :3000
+cd ../../kyc-connect-web && cp .env.example .env.local && npm install && npm run dev   # :3000
 ```
 
 Demo logins (development only, OTP shown on screen): see `bodaconnect_system/backend/README.md`.
