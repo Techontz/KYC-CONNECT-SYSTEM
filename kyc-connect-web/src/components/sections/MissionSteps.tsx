@@ -31,10 +31,11 @@ export function MissionSteps() {
 
   return (
     <section className="relative overflow-hidden bg-forest-900 text-white" aria-label={m.by}>
-      <div className="container-x py-20 md:py-28">
+      <div className="container-x py-14 md:py-28">
         <Reveal className="max-w-[880px]">
           <p className="text-[14px] font-semibold uppercase tracking-[0.14em] text-mint-200">{m.by}</p>
-          <blockquote className="mt-4 text-[24px] font-bold leading-snug md:text-[32px]">“{m.quote}”</blockquote>
+          <blockquote className="mt-4 text-[24px] font-bold leading-snug md:text-[32px]">{m.quote}</blockquote>
+          <p className="mt-5 text-[16px] leading-relaxed text-white/80 md:text-[18px]">{m.about}</p>
         </Reveal>
 
         <div className="mt-14 grid items-center gap-14 lg:grid-cols-[1fr_1fr]">
@@ -75,7 +76,7 @@ export function MissionSteps() {
           </ol>
 
           {/* phone with floating panels for the active step */}
-          <div className="relative mx-auto w-full max-w-[520px] py-6">
+          <div className="relative mx-auto hidden w-full max-w-[520px] py-6 lg:block">
             <PhoneMockup />
             <div key={`l-${lang}-${active}`} className="animate-slidein absolute left-0 top-[34%] hidden w-[210px] rounded-[10px] bg-white/10 p-3 ring-1 ring-white/20 backdrop-blur-md sm:block">
               <p className="text-[11px] text-white/70">{step.left[0]}</p>

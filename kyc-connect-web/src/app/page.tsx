@@ -4,10 +4,10 @@ import { Features } from "@/components/sections/Features";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Roles } from "@/components/sections/Roles";
 import { Trust } from "@/components/sections/Trust";
-import { Roadmap } from "@/components/sections/Roadmap";
+import { Services } from "@/components/sections/Services";
 import { MissionSteps } from "@/components/sections/MissionSteps";
 import { PilotPartners } from "@/components/sections/PilotPartners";
-import { LogoBand } from "@/components/sections/LogoBand";
+import { Community, FinalCta } from "@/components/sections/Community";
 import { VehicleBand } from "@/components/sections/VehicleBand";
 import { RiderBand } from "@/components/sections/RiderBand";
 import { LanesBand } from "@/components/sections/LanesBand";
@@ -24,17 +24,18 @@ export default function Home() {
       <main id="main">
         <Hero />
         <Features />
-        <VehicleBand />
+        <Services />
         <HowItWorks />
+        <VehicleBand />
         <RiderBand />
+        <Community />
+        <PilotPartners />
+        <MissionSteps />
         <Roles />
         <LanesBand />
         <Trust />
-        <Roadmap />
-        <LogoBand />
-        <MissionSteps />
-        <PilotPartners />
         <Faq />
+        <FinalCta />
       </main>
       <Footer />
     </>

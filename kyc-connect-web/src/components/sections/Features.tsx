@@ -2,7 +2,7 @@
 
 import { BadgeCheck, Bike, ClipboardCheck, Info, KeyRound, ShieldCheck, UserPlus, Users } from "lucide-react";
 import { useLang } from "../LangProvider";
-import { ButtonLink, Chip, Eyebrow, Reveal, SYSTEM_URL } from "../ui";
+import { ButtonLink, Chip, Eyebrow, Reveal } from "../ui";
 
 function RegistrationVisual() {
   const steps = ["Taarifa binafsi", "Chama & kikundi", "Chombo", "Faragha", "Hakiki"];
@@ -112,28 +112,28 @@ export function Features() {
   const layout = ["lg:col-span-7", "lg:col-span-5", "lg:col-span-5", "lg:col-span-7"];
 
   return (
-    <section id="platform" className="pattern-arches py-20 md:py-28">
+    <section id="about" className="pattern-arches py-14 md:py-28">
       <div className="container-x">
         <Reveal className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-[640px]">
+          <div className="max-w-[760px]">
             <Eyebrow>{f.eyebrow}</Eyebrow>
             <h2 className="heading mt-5 text-[36px] md:text-[52px]">{f.title}</h2>
-            <p className="mt-5 text-[18px] leading-relaxed text-ink/80 md:text-[20px]">{f.subtitle}</p>
+            <p className="mt-5 text-[16px] leading-relaxed text-ink/80 md:text-[18px]">{f.subtitle}</p>
           </div>
-          <ButtonLink href={SYSTEM_URL} variant="outline" className="shrink-0">
+          <ButtonLink href="#services" variant="outline" className="shrink-0">
             {f.cta}
           </ButtonLink>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-12">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-12">
           {f.items.map((item, i) => {
             const Visual = visuals[i];
             return (
               <Reveal key={item.title} delay={i * 140} variant="zoom" className={layout[i]}>
-                <article className="group relative flex h-full min-h-[380px] flex-col overflow-hidden rounded-[24px] bg-mint p-7 transition-transform duration-300 hover:-translate-y-1 md:p-9">
-                  <h3 className="heading text-[30px] md:text-[40px]">{item.title}</h3>
+                <article className="group relative flex h-full flex-col overflow-hidden rounded-[24px] bg-mint p-6 sm:min-h-[380px] sm:p-7 transition-transform duration-300 hover:-translate-y-1 md:p-9">
+                  <h3 className="heading text-[24px] md:text-[40px]">{item.title}</h3>
                   <p className="mt-3 max-w-[420px] text-[16px] leading-relaxed text-ink/80">{item.body}</p>
-                  <div className="relative mt-8 flex flex-1 items-end justify-center sm:justify-end">
+                  <div className="relative mt-8 hidden flex-1 items-end justify-end sm:flex">
                     <div className="transition-transform duration-500 group-hover:-translate-y-1">
                       <Visual />
                     </div>

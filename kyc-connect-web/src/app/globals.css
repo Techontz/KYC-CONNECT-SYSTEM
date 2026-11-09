@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Helvetica Neue", "HelveticaNeue", Helvetica, var(--font-arimo), Arial, sans-serif;
+  --font-sans: var(--font-brand), "Helvetica Neue", Helvetica, Arial, sans-serif;
 
   --color-brand: #39b54a;
   --color-brand-600: #2e9a3e;
@@ -58,13 +58,13 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .heading {
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: normal;
+  line-height: 1.15;
 }
 
 .container-x {
@@ -119,6 +119,12 @@ body {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Phones and tablets: never slide in sideways, it widens the page */
+@media (max-width: 1023px) {
+  .reveal[data-variant="left"]:not(.is-visible),
+  .reveal[data-variant="right"]:not(.is-visible) { transform: translateY(32px); }
 }
 
 /* Hero: content rises in, staggered, every time a slide becomes active */

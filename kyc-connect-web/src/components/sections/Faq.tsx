@@ -12,7 +12,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   const f = getBands(lang).faq;
   return (
-    <section id="faq" className="bg-white py-20 md:py-28">
+    <section id="faq" className="bg-white py-14 md:py-28">
       <div className="container-x">
         <Reveal className="text-center">
           <h2 className="heading text-[30px] text-forest-900 md:text-[40px]">{f.title}</h2>

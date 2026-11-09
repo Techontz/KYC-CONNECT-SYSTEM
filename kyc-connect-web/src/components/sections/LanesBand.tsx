@@ -54,12 +54,12 @@ export function LanesBand() {
         <div className="container-x relative mt-10 lg:absolute lg:inset-x-0 lg:-top-[300px] lg:mt-0">
           <div className="relative ml-auto w-full max-w-[600px] lg:mr-0">
             <div className="relative mx-auto w-[86%] lg:ml-auto lg:mr-0">
-              <div className="[mask-image:linear-gradient(to_bottom,#000_78%,transparent_97%)]">
+              <div className="hidden [mask-image:linear-gradient(to_bottom,#000_78%,transparent_97%)] lg:block">
                 <Image src="/images/hero-hand.png" alt="" width={1237} height={1120} sizes="(min-width: 1024px) 520px, 80vw" className="h-auto w-full" />
               </div>
 
               {/* compact notification cards attached to the phone's left edge */}
-              <ul className="mt-6 space-y-3 lg:mt-0 lg:space-y-0">
+              <ul className="mt-0 space-y-3 lg:mt-0 lg:space-y-0">
                 {l.callouts.map((c, i) => {
                   const Icon = icons[i];
                   const pos = ["lg:right-[41%] lg:top-[13%]", "lg:right-[45%] lg:top-[32%]", "lg:right-[40%] lg:top-[51%]"][i];

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Bike, KeyRound, MapPin } from "lucide-react";
 import { getBands } from "@/lib/bands";
 import { useLang } from "../LangProvider";
-import { ButtonLink, Reveal, SYSTEM_URL } from "../ui";
+import { ButtonLink, REGISTER_URL, Reveal } from "../ui";
 
 /** Vertical "road" divider: three lanes of dashes with small vehicle icons. */
 function RoadLanes() {
@@ -34,19 +34,19 @@ export function VehicleBand() {
   return (
     <section className="relative overflow-hidden bg-[#d9ece3]">
       <RoadLanes />
-      <div className="container-x relative grid items-center gap-14 py-20 md:py-28 lg:grid-cols-2 lg:gap-28">
+      <div className="container-x relative grid items-center gap-14 py-14 md:py-28 lg:grid-cols-2 lg:gap-28">
         <Reveal variant="left">
           <h2 className="heading text-[40px] text-forest md:text-[60px]">
             <span className="text-brand-700">{v.accent}</span> {v.title}
           </h2>
           <p className="mt-7 max-w-[560px] text-[18px] leading-relaxed text-forest md:text-[21px]">
             {v.before}
-            <a href={`${SYSTEM_URL}/vehicles`} className="font-medium text-brand-700 hover:underline">
+            <a href="#services" className="font-medium text-brand-700 hover:underline">
               {v.link}
             </a>
             {v.after}
           </p>
-          <ButtonLink href={SYSTEM_URL} icon className="mt-10">
+          <ButtonLink href={REGISTER_URL} icon className="mt-10">
             {t.hero.primary}
           </ButtonLink>
         </Reveal>

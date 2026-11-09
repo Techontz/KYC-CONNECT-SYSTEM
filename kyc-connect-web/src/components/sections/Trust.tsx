@@ -10,7 +10,7 @@ export function Trust() {
   return (
     <section id="trust" className="relative overflow-hidden bg-[radial-gradient(120%_120%_at_0%_100%,#1f3e35_0%,#0b1512_55%,#050908_100%)] text-white">
       <div className="dot-globe pointer-events-none absolute -right-40 top-0 h-full w-[1000px] opacity-90" aria-hidden="true" />
-      <div className="container-x relative py-20 md:py-28">
+      <div className="container-x relative py-14 md:py-28">
         <Reveal className="max-w-[640px]">
           <h2 className="heading text-[40px] md:text-[64px]">{tr.title}</h2>
           <p className="mt-6 text-[18px] leading-relaxed text-white/85 md:text-[20px]">{tr.subtitle}</p>

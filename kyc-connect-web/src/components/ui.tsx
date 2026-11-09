@@ -2,15 +2,20 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, type LucideIcon } from "lucide-react";
+import { PORTAL_LIVE } from "@/lib/content";
 
-export const SYSTEM_URL = process.env.NEXT_PUBLIC_SYSTEM_URL ?? "http://localhost:3011";
+export const PORTAL_URL = process.env.NEXT_PUBLIC_SYSTEM_URL ?? "http://localhost:3011";
+export const WHATSAPP_URL = "https://wa.me/255753452222";
+/** Until the portal is operational, registration buttons go to the contact route. */
+export const REGISTER_URL = PORTAL_LIVE ? PORTAL_URL : WHATSAPP_URL;
+export const LOGIN_URL = `${PORTAL_URL}/login`;
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "info@kycconnect.co.tz";
 
-/** Official KYCKonnect logo (from the company profile). On dark backgrounds it sits on a white plate. */
+/** Official BodaKonnect logo. On dark backgrounds it sits on a white plate. */
 export function Logo({ light = false, size = 40 }: { light?: boolean; size?: number }) {
   const img = (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src="/brand/kycconnect-logo.png" alt="KYC Connect: Identity. Trust. Connection." width={Math.round(size * 3.24)} height={size} style={{ height: size, width: "auto" }} className="block select-none" draggable={false} />
+    <img src="/brand/bodakonnect-logo.png" alt="BodaKonnect: Identity. Trust. Connection." width={Math.round(size * 3.5)} height={size} style={{ height: size, width: "auto" }} className="block select-none" draggable={false} />
   );
   return light ? <span className="inline-flex rounded-[10px] bg-white px-3 py-2">{img}</span> : <span className="inline-flex">{img}</span>;
 }
@@ -182,4 +187,5 @@ export const COMPANY = {
   phone: "+255 753 452 222",
   office: "Tz Wedding Plaza, Bwawani Street, Kinondoni, Dar es Salaam",
   website: "https://www.kycconnect.co.tz",
+  websiteLabel: "www.kycconnect.co.tz",
 };

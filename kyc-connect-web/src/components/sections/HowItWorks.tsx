@@ -20,8 +20,8 @@ export function HowItWorks() {
           <p className="mt-5 text-[18px] leading-relaxed text-white/90 md:text-[20px]">{t.how.subtitle}</p>
         </Reveal>
 
-        <div className="mt-14 grid items-end gap-12 lg:grid-cols-2">
-          <Reveal variant="left" className="order-2 lg:order-1">
+        <div className="mt-9 grid items-end gap-12 lg:mt-14 lg:grid-cols-2">
+          <Reveal variant="left" className="order-2 hidden lg:order-1 lg:block">
             <div className="relative mx-auto max-w-[460px]">
               <div className="animate-float">
                 <PhoneMockup className="translate-y-10" />
@@ -40,7 +40,7 @@ export function HowItWorks() {
             </div>
           </Reveal>
 
-          <ol className="order-1 space-y-9 pb-4 lg:order-2 lg:pb-24">
+          <ol className="order-1 space-y-7 pb-14 lg:order-2 lg:pb-24">
             {t.how.steps.map((s, i) => (
               <Reveal as="li" key={s.title} delay={i * 160} variant="right" className="flex gap-5">
                 <span className="pt-1.5 text-[20px] font-medium tabular-nums text-white/85">{String(i + 1).padStart(2, "0")}</span>

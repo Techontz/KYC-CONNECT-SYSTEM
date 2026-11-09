@@ -1,4 +1,4 @@
-# KYC Connect: BodaKonnect overview site
+# BodaKonnect public website
 
 Public landing page of **KYC CONNECT LTD** (BRELA 211723971) introducing **BodaKonnect**, its flagship platform (UMAPIDO Dodoma pilot)
 before users go into the full system.
@@ -73,4 +73,4 @@ then update the `aspectRatio` in `HeroHand.tsx` to the new image's width / heigh
 Company facts (BRELA number, dates, office, phone, email, pilot figures, collaborators) come from the
 KYC CONNECT LTD corporate profile, November 2026. Figures are shown as targets, and collaborators are shown
 with the profile's own disclaimer (working relationships, not signed agreements). The logo
-(`public/brand/kycconnect-logo.png`) was extracted from the profile.
+(`public/brand/bodakonnect-logo.png`) is the official BodaKonnect logo.

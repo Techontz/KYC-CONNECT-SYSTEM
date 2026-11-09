@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { Arimo } from "next/font/google";
+import { Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/components/LangProvider";
 
-// M-KOPA uses Helvetica Neue LT Pro (commercial). We use Helvetica Neue where the device has it
-// (Mac, iPhone) and Arimo, a free Helvetica-metric font, everywhere else.
-const arimo = Arimo({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-arimo", display: "swap" });
+// Closest free match to Safiri's custom fonts by measured letter widths. next/font self-hosts it.
+const bodyFont = Wix_Madefor_Text({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], variable: "--font-brand", display: "swap" });
 
 export const metadata: Metadata = {
-  title: "KYC CONNECT LTD | BodaKonnect | Identity. Trust. Connection.",
+  title: "BodaKonnect | Usajili wa Madereva wa Bodaboda na Bajaji",
   description:
-    "KYC CONNECT LTD builds digital identity, data and compliance technology in Tanzania. BodaKonnect, its flagship platform, connects bodaboda and bajaji riders, associations and institutions, starting with the Dodoma pilot.",
+    "BodaKonnect inaunganisha madereva wa bodaboda na bajaji, vyama na watoa huduma Tanzania. Developed and operated by KYC CONNECT LTD.",
   icons: { icon: "/icon.svg" },
-  openGraph: { images: ["/brand/kycconnect-logo.png"] },
+  openGraph: { images: ["/brand/bodakonnect-logo.png"] },
 };
 
 export const viewport: Viewport = {
@@ -23,7 +22,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="sw" className={arimo.variable}>
+    <html lang="sw" className={bodyFont.variable}>
       <body>
         <LangProvider>{children}</LangProvider>
       </body>

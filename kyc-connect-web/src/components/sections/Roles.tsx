@@ -14,29 +14,29 @@ const extras = {
     Icon: Bike,
     image: px("16341045"),
     pos: "30% 35%",
-    en: { scope: "Own profile only", limit: "Cannot approve own verification or see another rider's record.", stat: ["Profile", "100% complete"] },
-    sw: { scope: "Wasifu wake tu", limit: "Hawezi kuidhinisha uhakiki wake wala kuona rekodi ya dereva mwingine.", stat: ["Wasifu", "Umekamilika 100%"] },
+    en: { scope: "Own profile only", limit: "Cannot set own status or see another rider's record.", stat: ["Your data", "View, correct, delete"] },
+    sw: { scope: "Wasifu wake tu", limit: "Hawezi kuweka hali yake mwenyewe wala kuona rekodi ya dereva mwingine.", stat: ["Taarifa zako", "Ona, rekebisha, futa"] },
   },
   leader: {
     Icon: Users,
     image: px("37483951"),
     pos: "55% 35%",
-    en: { scope: "Assigned group only", limit: "No access to identity documents or members outside their group.", stat: ["Jamatini", "48 members"] },
-    sw: { scope: "Kikundi chake tu", limit: "Hana ufikiaji wa nyaraka za utambulisho wala wanachama nje ya kikundi chake.", stat: ["Jamatini", "Wanachama 48"] },
+    en: { scope: "Consented riders only", limit: "Only riders who consented to that partner, and only fields in the data-sharing agreement.", stat: ["Data sharing", "Rider consent required"] },
+    sw: { scope: "Waliotoa ridhaa tu", limit: "Madereva waliompa ridhaa mbia huyo tu, na taarifa zilizo kwenye mkataba wa kushirikisha data tu.", stat: ["Kushirikisha data", "Ridhaa ya dereva inahitajika"] },
   },
   assoc: {
     Icon: Building2,
     image: px("36875803"),
     pos: "center 40%",
-    en: { scope: "Own association", limit: "Cannot access other associations or bulk-export personal data by default.", stat: ["Verification backlog", "12 cases"] },
-    sw: { scope: "Chama chake", limit: "Hawezi kufikia vyama vingine wala kutoa taarifa binafsi kwa wingi bila idhini.", stat: ["Foleni ya uhakiki", "Kesi 12"] },
+    en: { scope: "Own association", limit: "Member list and status only. No access to document images.", stat: ["Members", "Status at a glance"] },
+    sw: { scope: "Chama chake", limit: "Orodha ya wanachama na hali zao tu. Hawezi kuona picha za nyaraka.", stat: ["Wanachama", "Hali kwa haraka"] },
   },
   agent: {
     Icon: ClipboardCheck,
     image: px("4042143"),
     pos: "center 30%",
-    en: { scope: "Assigned organisation", limit: "Cannot self-approve verification. Every action is logged.", stat: ["Duplicate check", "No match found"] },
-    sw: { scope: "Taasisi aliyopangiwa", limit: "Hawezi kujiidhinishia uhakiki. Kila hatua inarekodiwa.", stat: ["Ukaguzi wa marudio", "Hakuna marudio"] },
+    en: { scope: "Own region only", limit: "Cannot verify documents. The rider confirms consent by SMS code from their own phone.", stat: ["Consent", "Confirmed by SMS"] },
+    sw: { scope: "Mkoa wake tu", limit: "Hawezi kuhakiki nyaraka. Dereva anathibitisha ridhaa kwa msimbo wa SMS kutoka simu yake.", stat: ["Ridhaa", "Imethibitishwa kwa SMS"] },
   },
   verifier: {
     Icon: ShieldCheck,
@@ -49,8 +49,8 @@ const extras = {
     Icon: UserCog,
     image: px("9301502"),
     pos: "center 40%",
-    en: { scope: "Platform, fully audited", limit: "Privileged actions need strong sign-in and are always audit-logged.", stat: ["Audit trail", "Every action logged"] },
-    sw: { scope: "Mfumo mzima, unakaguliwa", limit: "Hatua nyeti zinahitaji uthibitisho imara na zinarekodiwa kila mara.", stat: ["Kumbukumbu za ukaguzi", "Kila hatua imerekodiwa"] },
+    en: { scope: "Configuration, fully audited", limit: "Privileged actions need strong sign-in and are always audit-logged.", stat: ["Audit trail", "Every action logged"] },
+    sw: { scope: "Usanidi, unakaguliwa", limit: "Hatua nyeti zinahitaji uthibitisho imara na zinarekodiwa kila mara.", stat: ["Kumbukumbu za ukaguzi", "Kila hatua imerekodiwa"] },
   },
 } as const;
 
@@ -81,7 +81,7 @@ export function Roles() {
   const labels = lang === "sw" ? { access: "Ufikiaji", can: "Anachoweza kufanya" } : { access: "Access", can: "What they can do" };
 
   return (
-    <section id="roles" className="bg-white py-20 md:py-28">
+    <section id="roles" className="bg-white py-14 md:py-28">
       <div className="container-x">
         <Reveal className="mx-auto max-w-[720px] text-center">
           <Eyebrow>{r.eyebrow}</Eyebrow>
